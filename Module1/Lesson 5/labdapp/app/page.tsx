@@ -5,6 +5,8 @@ import WalletContextProvider from "../components/WalletContextProvider";
 import { AppBar } from "../components/AppBar";
 import { PingButton } from "../components/PingButton";
 import Head from "next/head";
+import { BalanceDisplay } from "@/components/BalanceDisplay";
+import { SendSol } from "@/components/SendSol";
 
 export default function Home() {
   return (
@@ -16,7 +18,9 @@ export default function Home() {
       <WalletContextProvider>
         <AppBar />
         <div className={styles.AppBody}>
-          <PingButton />
+          <BalanceDisplay />
+          <SendSol />
+          {/* <PingButton /> */}
         </div>
       </WalletContextProvider>
     </div>
